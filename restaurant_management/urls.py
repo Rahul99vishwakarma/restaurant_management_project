@@ -14,9 +14,12 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+from django.shortcuts import render
 from django.contrib import admin
 from django.urls import path,include
 
+def  custom_404(request, exception):
+    return  render(request,'404.html',status=404)
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('home.urls')),
@@ -24,3 +27,5 @@ urlpatterns = [
     path('api/products/',include('products.urls')),
     path('api/orders/',include('orders.urls')),
 ]
+
+handler404 = 'restaurant _management.urls.custom_404'
