@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> menu </title>
+        <style>
+            body{
+            font-family;aerial,sans-serief; margin:20px;}
+            h1{
+            color:darkgreen; }
+            ul{list-style:none; padding:0;}
+            li{margin:10px 0; font-size:18px;}
+        </style>
+    </head>
+    <body>
+        <h1>Restaurant menu</h1>
+        <ul>
+            {% for item in menu_items %}
+                <li>{{item.name}} - {{item.priece}}</li>
+                {% endfor %}
+        </ul>
+    </body>
+</html>
