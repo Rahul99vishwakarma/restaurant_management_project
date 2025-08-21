@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Menu items</title>
+    </head>
+    <body>
+        <h2>our menu</h2>
+        <ul>
+            {% for items in product %}
+            <li>{{item.name}}-rs {{item.price}}</li>
+            {%endfor %}
+        </ul>
+    </body>
+</html>
