@@ -1,45 +1,14 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>{{restaurant_name}}</title>
-        <style>
-            body {
-            font-family:aerial, sans-serif;
-            text-text-align: center;
-            background-color:#f4f4f9;
-            margin:0;
-            padding:0;
-            }
-
-            header {
-            background: #333;
-            color : #fff;
-            padding:20px;
-            font-size: 24px;
-
-            }
-
-            main {
-            margin-top: 50px;
-            }
-            h1 {
-            color:#444;
-
-            }
-            p{
-            font-size:18px;
-            color: #666;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            {{restaurant_name}}
-        </header>
-        <main>
-            <h1> welcome to {{restaurant_name}}!</h1>
-            <p>we are happy to serve you delicious food</p>
-        </main>
-    </body>
+<html>
+<head>
+    <title> Restaurant Homepage</title>
+    <link rel="stylesheet" href="{% statics 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1> welcome to our Restaurant</h1>
+        <p>Enjoy the best food in town!</p>
+    </div>
+</body>
 </html>
