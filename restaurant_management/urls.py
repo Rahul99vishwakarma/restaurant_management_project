@@ -17,10 +17,13 @@ Including another URLconf
 from django.shortcuts import render
 from django.contrib import admin
 from django.urls import path,include
+from django.url import path
+from products import views as product_view
 
 def  custom_page_not_found(request, exception):
     return  render(request,'404.html',status=404)
 urlpatterns = [
+    path('menu/',product_view.product_list,name='menu')
     path('admin/', admin.site.urls),
     path('api/',include('home.urls')),
     path('api/accounts/',include('account.urls')),
