@@ -1,9 +1,13 @@
-from django.conf import settings
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+fro.form import feedbackform
 
-def homepage(request):
-    context = {
-        'restaurant_name': settings.RESTAURANT_NAME
-
-    }
-    return render(request, 'index.html',context)
+def feedback_view(request):
+    if request.method =='post':
+        form = feedbackform(request.post)
+        if form.is_valid():
+            form.save()
+            return redirect('feedback')
+        else:
+            form = feedbackform()
+        return render(request, 'feedback.html',{'fomr':form})
+        
