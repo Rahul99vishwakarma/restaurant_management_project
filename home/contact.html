@@ -1,35 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>contact us </title>
-    <script>
-        function validationform(){
-        let name = document.forms["contactform"]["name"].value;
-        let email = document.forms["contactform"]["email"].value;
-        if (name===""){
-        alert("name must be filled out");
-        return false;}
-        if(email===""){
-        alert("email must be filled out");
-        return false;
-        }
-        return true;
-        }
-    </script>
-</head>
-<body>
-    <h2>contact us</h2>
-    <form name="contactform" onsubmit="return validationform()">
-        <label for="name">name:</label><br>
-        <input type="text"name="name"><br><br>
+{% extend "base.html"%}
 
-        <label for="name">email:</label><br>
-        <input type="email" name="email"><br><br>
-
-        <label for="message">message:</label><br>
-        <textarea name="message"></textarea><br><br>
-
-        <input type="submit" value="submit">
-    </form>
-</body>
-</html>
+{% block title %}contact us{% endblock %}
+{% block content %}
+<h1>contact us</h1>
+<form>
+</form>
+{%endblock %}
