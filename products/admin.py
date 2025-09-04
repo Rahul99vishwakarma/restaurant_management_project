@@ -1,4 +1,4 @@
-from django.contrib import admin
-from .models import menuitem
+from django.shortcuts import render
 
-admin.site.register(meuiteam)
+def home_page(request):
+    return render(request, 'home.html')
