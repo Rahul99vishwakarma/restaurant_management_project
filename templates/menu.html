@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>menu pages</title>
+</head>
+<body>
+    <h1> our menu </h1>
+    <ul>
+        {% for item in items %}
+        <li>
+            <strong>{{items.name}}</strong>
+            <em>{{item.description}}</em>
+        </li>
+        {% empty %}
+        <li> no menu items available.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
